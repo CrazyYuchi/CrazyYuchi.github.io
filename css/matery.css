@@ -33,6 +33,24 @@
     }
 }
 
+/* 滚动条 (改）*/
+::-webkit-scrollbar-thumb {
+    background-color: #0ee1b3;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 3em;
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(218, 202, 255);
+    border-radius: 3em;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 15px;
+}
+
+
+
+
 body {
     background-color: #eaeaea;
     margin: 0;
@@ -578,10 +596,10 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/*.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
+}*/
 
 .bg-cover:before,
 .bg-cover:after {
