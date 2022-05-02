@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -297,7 +297,7 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">6</a></span>
+    <span class="count"><a href="/">7</a></span>
     <span class="name">Posts</span>
 </div>
 
@@ -311,7 +311,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">5</a></span>
+    <span class="count"><a href="/tags">6</a></span>
     <span class="name">Tags</span>
 </div>
 
@@ -327,7 +327,7 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">6</a></span>
+    <span class="count"><a href="/">7</a></span>
     <span class="name">Posts</span>
 </div>
 
@@ -341,7 +341,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">5</a></span>
+    <span class="count"><a href="/tags">6</a></span>
     <span class="name">Tags</span>
 </div>
 
@@ -424,7 +424,7 @@
                     </div>
                 </div>
 
-                <div class="introduction center-align" data-aos="fade-up">If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.</div>
+                <div class="introduction center-align" data-aos="fade-up"></div>
 
                 <style type="text/css">
     #posts-chart,
@@ -475,7 +475,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04"]
+            data: ["2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05"]
         },
         yAxis: {
             type: 'value',
@@ -485,7 +485,7 @@
                 name: 'Number of posts',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,6],
+                data: [0,0,0,0,0,0,0,0,0,0,0,6,1],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -527,7 +527,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Hexo","value":3},{"name":"诗词","value":1},{"name":"人情世故","value":1}],
+                data: [{"name":"Hexo","value":4},{"name":"诗词","value":1},{"name":"人情世故","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -551,7 +551,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["第一次搭建博客","撰写技巧","Blog教程","过年","情商"]
+                data: ["第一次搭建博客","撰写技巧","博客搭建+美化#标签","过年","Blog教程","情商"]
             }
         ],
         yAxis: [
@@ -564,7 +564,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [1,1,1,1,1],
+                data: [1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -599,51 +599,24 @@
                 
 
                 
-                
-<div id="myGallery" class="my-gallery">
-    <div class="title center-align" data-aos="zoom-in-up">
-        <i class="far fa-image"></i>&nbsp;&nbsp;Gallery
-    </div>
-    <div class="row">
-        
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/0.jpg">
-                <img src="/medias/featureimages/0.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/1.jpg">
-                <img src="/medias/featureimages/1.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/2.jpg">
-                <img src="/medias/featureimages/2.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-<script>
-    $(function () {
-        let animateClass = 'animated pulse';
-        $('#myGallery .photo').hover(function () {
-            $(this).addClass(animateClass);
-        }, function () {
-            $(this).removeClass(animateClass);
-        });
-    });
-</script>
-
-                
 
             </div>
         </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-content article-card-content">
+                    <div class="title center-align" data-aos="zoom-in-up">
+                        <i class="fa fa-address-book"></i>&nbsp;&nbsp;个人简历
+                     </div>
+                        <div id="articleContent" data-aos="fade-up">
+                            <h2 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a><center>个人信息</center></h2><p>姓名：鱼翅（我的真实姓名里真有鱼翅）<br>年龄：风华正茂<br>学历：本科<br>婚姻：未婚<br>籍贯：四川-广元<br>邮箱：<a href="mailto:&#x39;&#51;&#49;&#x38;&#52;&#x36;&#x34;&#50;&#55;&#64;&#113;&#113;&#x2e;&#x63;&#111;&#x6d;">&#x39;&#51;&#49;&#x38;&#52;&#x36;&#x34;&#50;&#55;&#64;&#113;&#113;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<h2 id="建站初衷"><a href="#建站初衷" class="headerlink" title="建站初衷"></a><center>建站初衷</center></h2><p>很多人曾问我，搭建这么一个博客有何作用？只是为了在像宇宙般浩瀚的互联网上留下一点属于自己的足迹？<br>确实，我是抱着这么一种心态来搭建这个博客的，也许不会有多少人进入到这个博客，也许这个博客不会传播多少有用的知识，<br>但是我还是想在这片浩瀚之地，划出属于自己的一块乌托邦之地。<br>写完一篇文章，部署后再自己反复观看，我觉得这是一种很愉悦的事情。<br>在不知不觉中，你就会写下很多篇博文，可能只是记录生活，亦或者是教程，但<br>这些都是美好的回忆，在五年十年后，再回过头来看这些自己曾经留下的足迹，这也是一件美好的事情。<br>希望屏幕前的你，能从这个地方，收获到什么吧！</p>
+<h2 id="个人时间轴"><a href="#个人时间轴" class="headerlink" title="个人时间轴"></a><center>个人时间轴</center></h2><p><strong>大学</strong><br>大一：担任班长，入学生会（还耍了女朋友，她叫海燕）<br>大二：担任团总支副书记<br>大三：创建创客机器人社团<br>大四：论文，实习（毕业当天就被市级部门招去实习）<br><strong>毕业</strong><br>第一年：zf做劳务派遣<br>未完待续……</p>
+
+                        </div>
+                  </div>
+             </div>
+       </div>
     </div>
 </main>
 
@@ -684,9 +657,9 @@
     
     <div class="row">
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
+                   server="tencent"
                    type="playlist"
-                   id="2383508940"
+                   id="8459613879"
                    fixed='true'
                    autoplay='false'
                    theme='#42b983'
@@ -714,7 +687,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.1k</span>&nbsp;字
+                class="white-color">16.9k</span>&nbsp;字
             
             
             
@@ -898,7 +871,7 @@ $(function () {
             document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
         }
         </script>
-        <script src="/js/snow.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>
