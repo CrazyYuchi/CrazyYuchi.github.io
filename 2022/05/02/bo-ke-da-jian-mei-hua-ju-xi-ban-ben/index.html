@@ -367,8 +367,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E7%BE%8E%E5%8C%96-%E6%A0%87%E7%AD%BE/">
-                                <span class="chip bg-color">博客搭建+美化#标签</span>
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E7%BE%8E%E5%8C%96/">
+                                <span class="chip bg-color">博客搭建+美化</span>
                             </a>
                         
                     </div>
@@ -401,14 +401,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    11.3k
+                    11.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    47 Min
+                    46 Min
                 </div>
                 
 
@@ -609,25 +609,25 @@ layout: <span class="token string">"friends"</span>
 ---
 </code></pre>
 <p>同时，在你的博客 source 目录下新建 _data 目录，在 _data 目录中新建 friends.json 文件，文件内容如下所示：</p>
-<pre class=" language-bash"><code class="language-bash">  <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+<pre class=" language-bash"><code class="language-bash">  <span class="token punctuation">[</span><span class="token punctuation">{</span>
     <span class="token string">"avatar"</span><span class="token keyword">:</span> <span class="token string">"http://image.luokangyuan.com/1_qq_27922023.jpg"</span>,
     <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"码酱"</span>,
     <span class="token string">"introduction"</span><span class="token keyword">:</span> <span class="token string">"我不是大佬，只是在追寻大佬的脚步"</span>,
     <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"http://luokangyuan.com/"</span>,
     <span class="token string">"title"</span><span class="token keyword">:</span> <span class="token string">"前去学习"</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;, &amp;#123;</span>
+<span class="token punctuation">}</span>, <span class="token punctuation">{</span>
     <span class="token string">"avatar"</span><span class="token keyword">:</span> <span class="token string">"http://image.luokangyuan.com/4027734.jpeg"</span>,
     <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"闪烁之狐"</span>,
     <span class="token string">"introduction"</span><span class="token keyword">:</span> <span class="token string">"编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬"</span>,
     <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"https://blinkfox.github.io/"</span>,
     <span class="token string">"title"</span><span class="token keyword">:</span> <span class="token string">"前去学习"</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;, &amp;#123;</span>
+<span class="token punctuation">}</span>, <span class="token punctuation">{</span>
     <span class="token string">"avatar"</span><span class="token keyword">:</span> <span class="token string">"http://image.luokangyuan.com/avatar.jpg"</span>,
     <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"ja_rome"</span>,
     <span class="token string">"introduction"</span><span class="token keyword">:</span> <span class="token string">"平凡的脚步也可以走出伟大的行程"</span>,
     <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"https://me.csdn.net/jlh912008548"</span>,
     <span class="token string">"title"</span><span class="token keyword">:</span> <span class="token string">"前去学习"</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;]</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span>
 </code></pre>
 <h5 id="2-7-菜单导航配置"><a href="#2-7-菜单导航配置" class="headerlink" title="2.7 菜单导航配置"></a>2.7 菜单导航配置</h5><h6 id="2-7-1-配置基本菜单导航的名称、路径url和图标icon"><a href="#2-7-1-配置基本菜单导航的名称、路径url和图标icon" class="headerlink" title="2.7.1. 配置基本菜单导航的名称、路径url和图标icon."></a>2.7.1. 配置基本菜单导航的名称、路径url和图标icon.</h6><p>1.菜单导航名称可以是中文也可以是英文(如：Index或主页)<br>2.图标icon 可以在Font Awesome 中查找</p>
 <pre class=" language-bash"><code class="language-bash">  menu:
@@ -757,33 +757,33 @@ layout: <span class="token string">"friends"</span>
 <h5 id="2-15-添加-Tidio-在线聊天功能（可选的）"><a href="#2-15-添加-Tidio-在线聊天功能（可选的）" class="headerlink" title="2.15 添加 Tidio 在线聊天功能（可选的）"></a>2.15 添加 Tidio 在线聊天功能（可选的）</h5><p>前往 [Tidio] (<a target="_blank" rel="noopener" href="https://www.tidio.com/)%E5%AE%98%E7%BD%91%E6%B3%A8%E5%86%8C%E5%B9%B6%E4%B8%94%E8%8E%B7%E5%8F%96">https://www.tidio.com/)官网注册并且获取</a> Public Key，并将 Public Key 填入主题的 _config.yml 文件中。</p>
 <h5 id="2-16-修改页脚"><a href="#2-16-修改页脚" class="headerlink" title="2.16 修改页脚"></a>2.16 修改页脚</h5><p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的 /layout/_partial/footer.ejs 文件中，包括站点、使用的主题、访问量等。</p>
 <h5 id="2-17-修改社交链接"><a href="#2-17-修改社交链接" class="headerlink" title="2.17 修改社交链接"></a>2.17 修改社交链接</h5><p>在主题的 _config.yml 文件中，默认支持 QQ、GitHub 和邮箱等的配置，你可以在主题文件的 /layout/_partial/social-link.ejs 文件中，新增、修改你需要的社交链接地址，增加链接可参考如下代码：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.github<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %></span>
+<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.github<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span>
     <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%= theme.socialLink.github %>"</span> class<span class="token operator">=</span><span class="token string">"tooltipped"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span> data-tooltip<span class="token operator">=</span><span class="token string">"访问我的GitHub"</span> data-position<span class="token operator">=</span><span class="token string">"top"</span> data-delay<span class="token operator">=</span><span class="token string">"50"</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>i class<span class="token operator">=</span><span class="token string">"fab fa-github"</span><span class="token operator">></span><span class="token operator">&lt;</span>/i<span class="token operator">></span>
     <span class="token operator">&lt;</span>/a<span class="token operator">></span>
-<span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %></span>
+<span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span>
 </code></pre>
 <p>其中，社交图标（如：fa-github）你可以在 Font Awesome 中搜索找到。以下是常用社交图标的标识，供你参考：</p>
 <p>Facebook: fab fa-facebook<br>Twitter: fab fa-twitter<br>Google-plus: fab fa-google-plus<br>Linkedin: fab fa-linkedin<br>Tumblr: fab fa-tumblr<br>Medium: fab fa-medium<br>Slack: fab fa-slack<br>Sina Weibo: fab fa-weibo<br>Wechat: fab fa-weixin<br>QQ: fab fa-qq<br>Zhihu: fab fa-zhihu<br><strong>注意:</strong> 本主题中使用的 Font Awesome 版本为 5.11.0。</p>
 <h5 id="2-18-修改打赏的二维码图片"><a href="#2-18-修改打赏的二维码图片" class="headerlink" title="2.18 修改打赏的二维码图片"></a>2.18 修改打赏的二维码图片</h5><p>在主题文件的 source/medias/reward 文件中，你可以替换成你的的微信和支付宝的打赏二维码图片。</p>
 <h5 id="2-19-配置音乐播放器（可选的）"><a href="#2-19-配置音乐播放器（可选的）" class="headerlink" title="2.19 配置音乐播放器（可选的）"></a>2.19 配置音乐播放器（可选的）</h5><p>要支持音乐播放，就必须开启音乐的播放配置和音乐数据的文件。</p>
 <p>首先，在你的博客 source 目录下的 _data 目录（没有的话就新建一个）中新建 musics.json 文件，文件内容如下所示：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token punctuation">{</span>
     <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"五月雨变奏电音"</span>,
     <span class="token string">"artist"</span><span class="token keyword">:</span> <span class="token string">"AnimeVibe"</span>,
     <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"http://xxx.com/music1.mp3"</span>,
     <span class="token string">"cover"</span><span class="token keyword">:</span> <span class="token string">"http://xxx.com/music-cover1.png"</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;, &amp;#123;</span>
+<span class="token punctuation">}</span>, <span class="token punctuation">{</span>
     <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"Take me hand"</span>,
     <span class="token string">"artist"</span><span class="token keyword">:</span> <span class="token string">"DAISHI DANCE,Cecile Corbel"</span>,
     <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"/medias/music/music2.mp3"</span>,
     <span class="token string">"cover"</span><span class="token keyword">:</span> <span class="token string">"/medias/music/cover2.png"</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;, &amp;#123;</span>
+<span class="token punctuation">}</span>, <span class="token punctuation">{</span>
     <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"Shape of You"</span>,
     <span class="token string">"artist"</span><span class="token keyword">:</span> <span class="token string">"J.Fla"</span>,
     <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"http://xxx.com/music3.mp3"</span>,
     <span class="token string">"cover"</span><span class="token keyword">:</span> <span class="token string">"http://xxx.com/music-cover3.png"</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;]</span>
+<span class="token punctuation">}</span><span class="token punctuation">]</span>
 </code></pre>
 <p><strong>注：</strong>以上 JSON 中的属性：name、artist、url、cover 分别表示音乐的名称、作者、音乐文件地址、音乐封面。</p>
 <p>然后，在主题的 _config.yml 配置文件中激活配置即可：</p>
@@ -833,16 +833,16 @@ tags:
 <h4 id="5-自定制修改"><a href="#5-自定制修改" class="headerlink" title="5. 自定制修改"></a>5. 自定制修改</h4><p><strong>我认为个人博客应该都有自己的风格和特色。</strong>如果本主题中的诸多功能和主题色彩你不满意，可以在主题中自定义修改，很多更自由的功能和细节点的修改难以在主题的 _config.yml 中完成，需要修改源代码才来完成。以下列出了可能对你有用的地方：</p>
 <h5 id="5-1-修改主题颜色"><a href="#5-1-修改主题颜色" class="headerlink" title="5.1 修改主题颜色"></a>5.1 修改主题颜色</h5><p>在主题文件的 /source/css/matery.css 文件中，搜索 .bg-color 来修改背景颜色：</p>
 <pre class=" language-bash"><code class="language-bash">/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */
-.bg-color <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+.bg-color <span class="token punctuation">{</span>
     background-image: linear-gradient<span class="token punctuation">(</span>to right, <span class="token comment" spellcheck="true">#4cbf30 0%, #0f9d58 100%);</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token punctuation">}</span>
 /*如果想去掉banner图的颜色渐变效果，请将以下的css属性注释掉或者删除掉即可*/
-@-webkit-keyframes rainbow <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+@-webkit-keyframes rainbow <span class="token punctuation">{</span>
    /* 动态切换背景颜色. */
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-@keyframes rainbow <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+<span class="token punctuation">}</span>
+@keyframes rainbow <span class="token punctuation">{</span>
     /* 动态切换背景颜色. */
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h5 id="5-2-修改-banner-图和文章特色图"><a href="#5-2-修改-banner-图和文章特色图" class="headerlink" title="5.2 修改 banner 图和文章特色图"></a>5.2 修改 banner 图和文章特色图</h5><p>你可以直接在 /source/medias/banner 文件夹中更换你喜欢的 banner 图片，主题代码中是每天动态切换一张，只需 7 张即可。如果你会 JavaScript 代码，可以修改成你自己喜欢切换逻辑，如：随机切换等，banner 切换的代码位置在 /layout/_partial/bg-cover-content.ejs 文件的 <script></script> 代码中：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token punctuation">$(</span><span class="token string">'.bg-cover'</span><span class="token punctuation">)</span>.css<span class="token punctuation">(</span><span class="token string">'background-image'</span>, <span class="token string">'url(/medias/banner/'</span> + new Date<span class="token punctuation">(</span><span class="token punctuation">)</span>.getDay<span class="token punctuation">(</span><span class="token punctuation">)</span> + <span class="token string">'.jpg)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -883,11 +883,11 @@ subtitle:
 <p><strong>注意：</strong></p>
 <p>网站打字效果副标题默认有两个，即sub1和sub2，如果想写多个，则需要修改两处地方，首先修改配置文件，如上面所示，在sub1和sub2后面继续添加即可，然后在去主题目录下的layout文件夹下的_partial文件夹，修改bg-cover-content.ejs文件，大约在12行左右，如下面所示：</p>
 <pre class=" language-bash"><code class="language-bash"> <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"description center-align"</span><span class="token operator">></span>
-     <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.subtitle.enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %></span>
+     <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.subtitle.enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span>
          <span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"subtitle"</span><span class="token operator">></span><span class="token operator">&lt;</span>/span<span class="token operator">></span>
          <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/typed.js@2.0.11"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
         <span class="token operator">&lt;</span>script<span class="token operator">></span>
-            var typed <span class="token operator">=</span> new Typed<span class="token punctuation">(</span><span class="token string">"#subtitle"</span>, <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            var typed <span class="token operator">=</span> new Typed<span class="token punctuation">(</span><span class="token string">"#subtitle"</span>, <span class="token punctuation">{</span>
                 strings: <span class="token punctuation">[</span><span class="token string">'&lt;%= theme.subtitle.sub1 %>'</span>,
                           <span class="token string">'&lt;%= theme.subtitle.sub2 %>'</span>,
                           <span class="token string">'&lt;%= theme.subtitle.sub3 %>'</span>,
@@ -899,11 +899,11 @@ subtitle:
                  loop: <span class="token operator">&lt;</span>%<span class="token operator">=</span> theme.subtitle.loop %<span class="token operator">></span>,   
                  backSpeed: <span class="token operator">&lt;</span>%<span class="token operator">=</span> theme.subtitle.backSpeed %<span class="token operator">></span>,
                  showCursor: <span class="token operator">&lt;</span>%<span class="token operator">=</span> theme.subtitle.showCursor %<span class="token operator">></span>
-              <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
           <span class="token operator">&lt;</span>/script<span class="token operator">></span>
-      <span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; else &amp;#123; %></span>
+      <span class="token operator">&lt;</span>% <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span> %<span class="token operator">></span>
             <span class="token operator">&lt;</span>%<span class="token operator">=</span> config.description %<span class="token operator">></span>
-      <span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %></span>
+      <span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span>
 <span class="token operator">&lt;</span>/div<span class="token operator">></span>
 </code></pre>
 <p>2.社交链接的修改<br>默认的配置信息为：</p>
@@ -935,48 +935,48 @@ socialLink:
   rss: <span class="token boolean">true</span> <span class="token comment" spellcheck="true"># true、false</span>
 </code></pre>
 <p>其中的weixin我是用的图片链接，会跳转到一个新的标签页，之后还需要修改ejs文件，文件在主题目录下的layout文件夹下的_partial文件夹，修改social-link.ejs，添加相关的配置，个人添加的配置如下(例如)：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.jianshu<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %></span>
+<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.jianshu<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span>
     <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%= theme.socialLink.jianshu %>"</span> class<span class="token operator">=</span><span class="token string">"tooltipped"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span> data-tooltip<span class="token operator">=</span><span class="token string">"关注我的简书: &lt;%= theme.socialLink.jianshu %>"</span> data-position<span class="token operator">=</span><span class="token string">"top"</span> data-delay<span class="token operator">=</span><span class="token string">"50"</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>i class<span class="token operator">=</span><span class="token string">"fab fa-jianshu"</span><span class="token operator">></span>简<span class="token operator">&lt;</span>/i<span class="token operator">></span>
     <span class="token operator">&lt;</span>/a<span class="token operator">></span>
-<span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %></span>
+<span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span>
 
-<span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.csdn<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %></span>
+<span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.csdn<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span>
     <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%= theme.socialLink.csdn %>"</span> class<span class="token operator">=</span><span class="token string">"tooltipped"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span> data-tooltip<span class="token operator">=</span><span class="token string">"关注我的CSDN: &lt;%= theme.socialLink.csdn %>"</span> data-position<span class="token operator">=</span><span class="token string">"top"</span> data-delay<span class="token operator">=</span><span class="token string">"50"</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>i class<span class="token operator">=</span><span class="token string">"fab fa-csdn"</span><span class="token operator">></span>C<span class="token operator">&lt;</span>/i<span class="token operator">></span>
     <span class="token operator">&lt;</span>/a<span class="token operator">></span>
-<span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %></span>
-<span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.juejin<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %></span>
+<span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span>
+<span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.juejin<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span>
     <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%= theme.socialLink.juejin %>"</span> class<span class="token operator">=</span><span class="token string">"tooltipped"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span> data-tooltip<span class="token operator">=</span><span class="token string">"关注我的掘金: &lt;%= theme.socialLink.juejin %>"</span> data-position<span class="token operator">=</span><span class="token string">"top"</span> data-delay<span class="token operator">=</span><span class="token string">"50"</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>i class<span class="token operator">=</span><span class="token string">"fab fa-juejin"</span><span class="token operator">></span>掘<span class="token operator">&lt;</span>/i<span class="token operator">></span>
     <span class="token operator">&lt;</span>/a<span class="token operator">></span>
-<span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %></span>
+<span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span>
 
-<span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.cnblogs<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %></span>
+<span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.cnblogs<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span>
     <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%= theme.socialLink.cnblogs %>"</span> class<span class="token operator">=</span><span class="token string">"tooltipped"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span> data-tooltip<span class="token operator">=</span><span class="token string">"关注我的博客园: &lt;%= theme.socialLink.cnblogs %>"</span> data-position<span class="token operator">=</span><span class="token string">"top"</span> data-delay<span class="token operator">=</span><span class="token string">"50"</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>i class<span class="token operator">=</span><span class="token string">"fab fa-juejin"</span><span class="token operator">></span>博<span class="token operator">&lt;</span>/i<span class="token operator">></span>
     <span class="token operator">&lt;</span>/a<span class="token operator">></span>
-<span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %></span>
-<span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.weixin<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %></span>
+<span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span>
+<span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.socialLink.weixin<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span>
     <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"&lt;%= theme.socialLink.weixin %>"</span> class<span class="token operator">=</span><span class="token string">"tooltipped"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span> data-tooltip<span class="token operator">=</span><span class="token string">"微信联系我: &lt;%= theme.socialLink.weixin %>"</span> data-position<span class="token operator">=</span><span class="token string">"top"</span> data-delay<span class="token operator">=</span><span class="token string">"50"</span><span class="token operator">></span>
         <span class="token operator">&lt;</span>i class<span class="token operator">=</span><span class="token string">"fab fa-weixin"</span><span class="token operator">></span><span class="token operator">&lt;</span>/i<span class="token operator">></span>
     <span class="token operator">&lt;</span>/a<span class="token operator">></span>
-<span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %></span>
+<span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span>
 </code></pre>
 <h3 id="六、hexo博客美化（DIY）"><a href="#六、hexo博客美化（DIY）" class="headerlink" title="六、hexo博客美化（DIY）"></a>六、hexo博客美化（DIY）</h3><p>主题DIY会涉及到js文件和css文件等的修改，个人建议新增的js文件放在themes/matery/layout/layout.ejs这个文件下，这样会稍微加快博客访问的速度。不想花钱​最好的方式是使用cdn.jsdeliver。以后会说到。</p>
 <h4 id="1-动态标题"><a href="#1-动态标题" class="headerlink" title="1. 动态标题"></a>1. 动态标题</h4><p>先放上效果图再说：<br><img src="52.jpg" alt="52"> <img src="53.jpg" alt="53"><br>实现方法，直接在themes/matery/layout/layout.ejs文件中添加如下代码：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
     var OriginTitile<span class="token operator">=</span>document.title,st<span class="token punctuation">;</span>
-    document.addEventListener<span class="token punctuation">(</span><span class="token string">"visibilitychange"</span>,function<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-        document.hidden?<span class="token punctuation">(</span>document.title<span class="token operator">=</span><span class="token string">"ヽ(●-`Д´-)ノ你要玩捉迷藏嘛"</span>,clearTimeout<span class="token punctuation">(</span>st<span class="token punctuation">))</span>:<span class="token punctuation">(</span>document.title<span class="token operator">=</span><span class="token string">"(Ő∀Ő3)ノ好哦！"</span>,st<span class="token operator">=</span>setTimeout<span class="token punctuation">(</span>function<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;document.title=OriginTitile&amp;#125;,3e3))</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;)</span>
+    document.addEventListener<span class="token punctuation">(</span><span class="token string">"visibilitychange"</span>,function<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        document.hidden?<span class="token punctuation">(</span>document.title<span class="token operator">=</span><span class="token string">"ヽ(●-`Д´-)ノ你要玩捉迷藏嘛"</span>,clearTimeout<span class="token punctuation">(</span>st<span class="token punctuation">))</span>:<span class="token punctuation">(</span>document.title<span class="token operator">=</span><span class="token string">"(Ő∀Ő3)ノ好哦！"</span>,st<span class="token operator">=</span>setTimeout<span class="token punctuation">(</span>function<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>document.title<span class="token operator">=</span>OriginTitile<span class="token punctuation">}</span>,3e3<span class="token punctuation">))</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token operator">&lt;</span>/script<span class="token operator">></span>
 </code></pre>
 <h4 id="2-修改导航栏颜色以及透明效果"><a href="#2-修改导航栏颜色以及透明效果" class="headerlink" title="2. 修改导航栏颜色以及透明效果"></a>2. 修改导航栏颜色以及透明效果</h4><p>打开themes/matery/source/css/matery.css文件，大约在250行，有一个.bg-color属性，修改其属性值即可，代码如下：</p>
-<pre class=" language-bash"><code class="language-bash">.bg-color <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+<pre class=" language-bash"><code class="language-bash">.bg-color <span class="token punctuation">{</span>
     background-image: linear-gradient<span class="token punctuation">(</span>to right, <span class="token comment" spellcheck="true">#4cbf30 0%, #0f9d58 100%); //修改成自己喜欢的颜色值</span>
     opacity: 0.8<span class="token punctuation">;</span>  //透明效果 值范围 0~1，看情况自己修改
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h4 id="3-添加动态诗词"><a href="#3-添加动态诗词" class="headerlink" title="3. 添加动态诗词"></a>3. 添加动态诗词</h4><p>采用的是今日诗词，每次返回一句诗词，根据时间、地点、天气、事件智能推荐。官网有API文档，可以去看一下，有多种安装方式，最简单的方式就是从官网获取代码，在/themes/matery/layout/_partial/head.ejs添加下面的一行代码：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://sdk.jinrishici.com/v2/browser/jinrishici.js"</span> charset<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token operator">></span><span class="token operator">&lt;</span>/script<span class="token operator">></span>
@@ -984,37 +984,37 @@ socialLink:
 <p>然后再将/themes/matery/layout/_partial/bg-cover-content.ejs中的&lt;%= config.description %&gt;修改为把&lt;%= config.description %&gt;改为&lt;%- ‘<span id="jinrishici-sentence">正在加载今日诗词….</span>‘ %&gt;，这个使用前提是将主题配置文件的subtitle的值改为false。</p>
 <h4 id="4-鼠标点击文字特效"><a href="#4-鼠标点击文字特效" class="headerlink" title="4. 鼠标点击文字特效"></a>4. 鼠标点击文字特效</h4><p>实现方法，引入js文件，在主题文件下的/source/js/下新建click_show_text.js，其代码如下：</p>
 <pre class=" language-bash"><code class="language-bash">var a_idx <span class="token operator">=</span> 0<span class="token punctuation">;</span>
-jQuery<span class="token punctuation">(</span>document<span class="token punctuation">)</span>.ready<span class="token punctuation">(</span>function <span class="token punctuation">(</span>$<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    <span class="token punctuation">$(</span><span class="token string">"body"</span><span class="token punctuation">)</span>.click<span class="token punctuation">(</span>function <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+jQuery<span class="token punctuation">(</span>document<span class="token punctuation">)</span>.ready<span class="token punctuation">(</span>function <span class="token punctuation">(</span>$<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">$(</span><span class="token string">"body"</span><span class="token punctuation">)</span>.click<span class="token punctuation">(</span>function <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         var a <span class="token operator">=</span> new Array<span class="token punctuation">(</span><span class="token string">"富强"</span>, <span class="token string">"民主"</span>, <span class="token string">"文明"</span>, <span class="token string">"和谐"</span>, <span class="token string">"自由"</span>, <span class="token string">"平等"</span>, <span class="token string">"公正"</span>, <span class="token string">"法治"</span>, <span class="token string">"爱国"</span>, <span class="token string">"敬业"</span>, <span class="token string">"诚信"</span>, <span class="token string">"友善"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         var <span class="token variable">$i</span> <span class="token operator">=</span> <span class="token punctuation">$(</span><span class="token string">"&lt;span/>"</span><span class="token punctuation">)</span>.text<span class="token punctuation">(</span>a<span class="token punctuation">[</span>a_idx<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         a_idx <span class="token operator">=</span> <span class="token punctuation">(</span>a_idx + 1<span class="token punctuation">)</span> % a.length<span class="token punctuation">;</span>
         var x <span class="token operator">=</span> e.pageX,
             y <span class="token operator">=</span> e.pageY<span class="token punctuation">;</span>
-        <span class="token variable">$i</span>.css<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token variable">$i</span>.css<span class="token punctuation">(</span><span class="token punctuation">{</span>
             <span class="token string">"z-index"</span><span class="token keyword">:</span> 5,
             <span class="token string">"top"</span><span class="token keyword">:</span> y - 20,
             <span class="token string">"left"</span><span class="token keyword">:</span> x,
             <span class="token string">"position"</span><span class="token keyword">:</span> <span class="token string">"absolute"</span>,
             <span class="token string">"font-weight"</span><span class="token keyword">:</span> <span class="token string">"bold"</span>,
             <span class="token string">"color"</span><span class="token keyword">:</span> <span class="token string">"#FF0000"</span>
-        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">$(</span><span class="token string">"body"</span><span class="token punctuation">)</span>.append<span class="token punctuation">(</span><span class="token variable">$i</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token variable">$i</span>.animate<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token variable">$i</span>.animate<span class="token punctuation">(</span><span class="token punctuation">{</span>
                 <span class="token string">"top"</span><span class="token keyword">:</span> y - 180,
                 <span class="token string">"opacity"</span><span class="token keyword">:</span> 0
-            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;,</span>
+            <span class="token punctuation">}</span>,
             3000,
-            <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 <span class="token variable">$i</span>.remove<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     setTimeout<span class="token punctuation">(</span><span class="token string">'delay()'</span>, 2000<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">function</span> delay<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+<span class="token keyword">function</span> delay<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">$(</span><span class="token string">".buryit"</span><span class="token punctuation">)</span>.removeAttr<span class="token punctuation">(</span><span class="token string">"onclick"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h4 id="5-修改原有相册"><a href="#5-修改原有相册" class="headerlink" title="5. 修改原有相册"></a>5. 修改原有相册</h4><p>参考教程：后面专门出一期</p>
 <h4 id="6-添加天气小插件"><a href="#6-添加天气小插件" class="headerlink" title="6. 添加天气小插件"></a>6. 添加天气小插件</h4><p>首先去<a target="_blank" rel="noopener" href="https://cj.weather.com.cn/plugin/pc">中国天气官网</a>，配置自己的插件，选择自定义插件—&gt;自定义样式——&gt;生成代码，然后会生成一段代码，复制粘贴到 themes/matery/layout/layout.ejs即可。</p>
@@ -1071,9 +1071,9 @@ jQuery<span class="token punctuation">(</span>document<span class="token punctua
 <p>4.适配Matery主题：在 /themes/hexo-theme-matery/layout 文件夹下面创建一个名为 douban.ejs 的文件，并将下面的内容复制进去：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>%- partial<span class="token punctuation">(</span><span class="token string">'_partial/post-cover'</span><span class="token punctuation">)</span> %<span class="token operator">></span> 
 <span class="token operator">&lt;</span>style<span class="token operator">></span> 
-    .hexo-douban-picture img <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    .hexo-douban-picture img <span class="token punctuation">{</span>
         width: 100%<span class="token punctuation">;</span> 
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; </span>
+    <span class="token punctuation">}</span> 
 <span class="token operator">&lt;</span>/style<span class="token operator">></span>
 <span class="token operator">&lt;</span>main class<span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">></span> 
     <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"contact"</span> class<span class="token operator">=</span><span class="token string">"container chip-container"</span><span class="token operator">></span> 
@@ -1089,21 +1089,21 @@ jQuery<span class="token punctuation">(</span>document<span class="token punctua
             <span class="token operator">&lt;</span>/div<span class="token operator">></span> 
         <span class="token operator">&lt;</span>/div<span class="token operator">></span> 
         <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">></span> 
-            <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.gitalk <span class="token operator">&amp;&amp;</span> theme.gitalk.enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %></span>
+            <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.gitalk <span class="token operator">&amp;&amp;</span> theme.gitalk.enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span>
                 <span class="token operator">&lt;</span>%- partial<span class="token punctuation">(</span><span class="token string">'_partial/gitalk'</span><span class="token punctuation">)</span> %<span class="token operator">></span>
-            <span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %> </span>
-            <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.gitment.enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %> </span>
+            <span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span> 
+            <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.gitment.enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span> 
                 <span class="token operator">&lt;</span>%- partial<span class="token punctuation">(</span><span class="token string">'_partial/gitment'</span><span class="token punctuation">)</span> %<span class="token operator">></span> 
-            <span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %> </span>
-            <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.disqus.enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %> </span>
+            <span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span> 
+            <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.disqus.enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span> 
                 <span class="token operator">&lt;</span>%- partial<span class="token punctuation">(</span><span class="token string">'_partial/disqus'</span><span class="token punctuation">)</span> %<span class="token operator">></span> 
-            <span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %> </span>
-            <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.livere <span class="token operator">&amp;&amp;</span> theme.livere.enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %> </span>
+            <span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span> 
+            <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.livere <span class="token operator">&amp;&amp;</span> theme.livere.enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span> 
                 <span class="token operator">&lt;</span>%- partial<span class="token punctuation">(</span><span class="token string">'_partial/livere'</span><span class="token punctuation">)</span> %<span class="token operator">></span> 
-            <span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %> </span>
-            <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.valine <span class="token operator">&amp;&amp;</span> theme.valine.enable<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; %> </span>
+            <span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span> 
+            <span class="token operator">&lt;</span>% <span class="token keyword">if</span> <span class="token punctuation">(</span>theme.valine <span class="token operator">&amp;&amp;</span> theme.valine.enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> %<span class="token operator">></span> 
                 <span class="token operator">&lt;</span>%- partial<span class="token punctuation">(</span><span class="token string">'_partial/valine'</span><span class="token punctuation">)</span> %<span class="token operator">></span> 
-            <span class="token operator">&lt;</span>% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; %> </span>
+            <span class="token operator">&lt;</span>% <span class="token punctuation">}</span> %<span class="token operator">></span> 
         <span class="token operator">&lt;</span>/div<span class="token operator">></span> 
     <span class="token operator">&lt;</span>/div<span class="token operator">></span> 
 <span class="token operator">&lt;</span>/main<span class="token operator">></span>
@@ -1163,9 +1163,9 @@ color<span class="token operator">=</span><span class="token string">"122 103 23
 <pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
         //只在桌面版网页启用特效
         var windowWidth <span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>window<span class="token variable">)</span></span>.width<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>windowWidth <span class="token operator">></span> 768<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>windowWidth <span class="token operator">></span> 768<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             document.write<span class="token punctuation">(</span><span class="token string">'&lt;script type="text/javascript" src="/js/sakura.js">&lt;\/script>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token punctuation">}</span>
         <span class="token operator">&lt;</span>/script<span class="token operator">></span>
 </code></pre>
 <h4 id="13-添加鼠标彩虹星星掉落跟随效果"><a href="#13-添加鼠标彩虹星星掉落跟随效果" class="headerlink" title="13. 添加鼠标彩虹星星掉落跟随效果"></a>13. 添加鼠标彩虹星星掉落跟随效果</h4><p>在themes/matery/source/js目录下新建cursor.js文件，打开这个<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/js/cursor.js">网址</a>，将内容复制粘贴到cursor.js即可。</p>
@@ -1206,9 +1206,9 @@ description: <span class="token string">"Oops～，我崩溃了！找不到你�
 <p>紧接着再新建主题文件夹的layout目录下新建404.ejs文件，添加内容如下：</p>
 <pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span>
     /* don<span class="token string">'t remove. */
-    .about-cover &amp;#123;
+    .about-cover {
         height: 90.2vh;
-    &amp;#125;
+    }
 &lt;/style>
 &lt;div class="bg-cover pd-header about-cover">
     &lt;div class="container">
@@ -1338,8 +1338,8 @@ livere:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E7%BE%8E%E5%8C%96-%E6%A0%87%E7%AD%BE/">
-                                    <span class="chip bg-color">博客搭建+美化#标签</span>
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E7%BE%8E%E5%8C%96/">
+                                    <span class="chip bg-color">博客搭建+美化</span>
                                 </a>
                             
                         </div>
@@ -1529,31 +1529,30 @@ livere:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/05/02/bo-ke-da-jian-mei-hua-ju-xi-ban-ben/">
+                <a href="/2022/05/03/hexo-bo-ke-zhong-yu-luan-ma-jie-jue-fang-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="博客搭建+美化（巨细版本）">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="hexo博客中“{”与“}”乱码解决方法">
                         
-                        <span class="card-title">博客搭建+美化（巨细版本）</span>
+                        <span class="card-title">hexo博客中“{”与“}”乱码解决方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            博客搭建+美化（巨细版本）一、博客环境搭建修改配置文件要用到的软件：Visual Studio Code（百度下载安装即可）
-下载Git和Node.jsNode.js的安装与配置首先去Node.js官网 下载node.js的安装程序，根据你
+                            hexo博客中“{”与“}”乱码解决方法一、出错原因&emsp;&emsp;前几天写了一个教程，网友（Treasure）看了之后问我代码为什么出错了，发现博客中所有的“{”与“}”都成了乱码，效果如下：
+&lt;script type="t
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-02
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-03
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1566,12 +1565,11 @@ livere:
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E7%BE%8E%E5%8C%96-%E6%A0%87%E7%AD%BE/">
-                        <span class="chip bg-color">博客搭建+美化#标签</span>
+                    <a href="/tags/%E4%B9%B1%E7%A0%81/">
+                        <span class="chip bg-color">乱码</span>
                     </a>
                     
                 </div>
@@ -1827,7 +1825,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.4k</span>&nbsp;字
+                class="white-color">16.7k</span>&nbsp;字
             
             
             
