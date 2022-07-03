@@ -110,19 +110,42 @@
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
-      <span>留言板</span>
+      <span>留言</span>
     </a>
     
   </li>
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/galleries" class="waves-effect waves-light">
+    <a href="" class="waves-effect waves-light">
+
       
-      <i class="fas fa-image" style="zoom: 0.6;"></i>
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
       
-      <span>相册</span>
+      <span>媒体</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/galleries">
+          
+          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>相册</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/videos">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>视频</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -132,7 +155,7 @@
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>友情链接</span>
+      <span>友接</span>
     </a>
     
   </li>
@@ -224,19 +247,43 @@
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
-			留言板
+			留言
 		</a>
           
         </li>
         
         <li class="m-nav-item">
 	  
-		<a href="/galleries" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-image"></i>
+				<i class="fa-fw fas fa-list"></i>
 			
-			相册
+			媒体
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/galleries " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
+			      
+		          <span>相册</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/videos " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>视频</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -246,7 +293,7 @@
 			
 			    <i class="fa-fw fas fa-address-book"></i>
 			
-			友情链接
+			友接
 		</a>
           
         </li>
@@ -497,7 +544,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06"]
+            data: ["2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07"]
         },
         yAxis: {
             type: 'value',
@@ -507,7 +554,7 @@
                 name: 'Number of posts',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,6,6,3],
+                data: [0,0,0,0,0,0,0,0,0,6,6,3,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -573,7 +620,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["私人","第一次搭建博客","撰写技巧","测试","乱码","博客搭建+美化","博客加密","博客插图","博客排序","博文自选图片"]
+                data: ["私人","第一次搭建博客","撰写技巧","测试","乱码","博客加密","博客插图","博客搭建+美化","博文自选图片","博客排序"]
             }
         ],
         yAxis: [
