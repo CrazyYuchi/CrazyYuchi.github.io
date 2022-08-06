@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo博客中“{”与“}”乱码解决方法, 兴平">
+    <meta name="keywords" content="兴平">
     <meta name="description" content="个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo博客中“{”与“}”乱码解决方法 | 兴平</title>
+    <title>兴平</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -591,12 +591,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.rmb.bdstatic.com/bjh/c394b52d22e36379da925d34b568d8b9.jpeg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo博客中“{”与“}”乱码解决方法</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -711,25 +711,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E4%B9%B1%E7%A0%81/">
-                                <span class="chip bg-color">乱码</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Hexo/" class="post-category">
-                                Hexo
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -738,7 +725,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-03
+                    2022-08-06
                 </div>
                 
 
@@ -747,7 +734,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    456
+                    454
                 </div>
                 
 
@@ -769,62 +756,200 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="hexo博客中“-”与“-”乱码解决方法"><a href="#hexo博客中“-”与“-”乱码解决方法" class="headerlink" title="hexo博客中“{”与“}”乱码解决方法"></a><center>hexo博客中“{”与“}”乱码解决方法</center></h2><h3 id="一、出错原因"><a href="#一、出错原因" class="headerlink" title="一、出错原因"></a>一、出错原因</h3><p>&emsp;&emsp;前几天写了一个教程，网友（Treasure）看了之后问我代码为什么出错了，发现博客中所有的“{”与“}”都成了乱码，效果如下：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
-        //只在桌面版网页启用特效
-        var windowWidth <span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>window<span class="token variable">)</span></span>.width<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>windowWidth <span class="token operator">></span> 768<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-            document.write<span class="token punctuation">(</span><span class="token string">'&lt;script type="text/javascript" src="/js/sakura.js">&lt;\/script>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125</span>
-        <span class="token operator">&lt;</span>/script<span class="token operator">></span>
-</code></pre>
-<p>&emsp;&emsp;一开始我还以为是我写错了，结果看我原文件写的是对的，查资料发现“{”与“}”被转义了。 我是用md文件直接导出html文件，发现显示都是正常的，那么很显然时hexo生成html时对数据进行了转义。</p>
-<h3 id="二、解决办法"><a href="#二、解决办法" class="headerlink" title="二、解决办法"></a>二、解决办法</h3><p>&emsp;&emsp;找到文件：node_modules\hexo-prism-plugin\src\index.js， 在map中添加对应的转义配置，忽略相关转义操作：</p>
-<pre class=" language-bash"><code class="language-bash">const map <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token string">'&amp;#39;'</span><span class="token keyword">:</span> <span class="token string">'\''</span>,
-  <span class="token string">'&amp;amp;'</span><span class="token keyword">:</span> <span class="token string">'&amp;'</span>,
-  <span class="token string">'&amp;gt;'</span><span class="token keyword">:</span> <span class="token string">'>'</span>,
-  <span class="token string">'&amp;lt;'</span><span class="token keyword">:</span> <span class="token string">'&lt;'</span>,
-  <span class="token string">'&amp;quot;'</span><span class="token keyword">:</span> <span class="token string">'"'</span>,
-  <span class="token string">'&amp;#123;'</span><span class="token keyword">:</span> <span class="token string">'{'</span>,
-  <span class="token string">'&amp;#124;'</span><span class="token keyword">:</span> <span class="token string">'|'</span>,
-  <span class="token string">'&amp;#125;'</span><span class="token keyword">:</span> <span class="token string">'}'</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
-<p>&emsp;&emsp;此时再查看博客就正常了。</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
-        //只在桌面版网页启用特效
-        var windowWidth <span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>window<span class="token variable">)</span></span>.width<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>windowWidth <span class="token operator">></span> 768<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            document.write<span class="token punctuation">(</span><span class="token string">'&lt;script type="text/javascript" src="/js/sakura.js">&lt;\/script>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token operator">&lt;</span>/script<span class="token operator">></span>
-</code></pre>
-<h3 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h3><p>&emsp;&emsp;常见的转义符有：HTML ISO-8859-1 参考手册</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">!</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#33; — 惊叹号</span>
-" <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#34; &amp;quot; 双引号</span>
-<span class="token comment" spellcheck="true"># &amp;#35; — 数字标志</span>
-$ <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#36; — 美元标志</span>
-% <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#37; — 百分号</span>
-<span class="token operator">&amp;</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#38; &amp;amp;  — &amp;符</span>
-‘ <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#39; — 单引号</span>
-<span class="token punctuation">(</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#40; — 小括号左边部分</span>
-<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#41; — 小括号右边部分</span>
-* <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#42; — 星号</span>
-+ <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#43; — 加号</span>
-<span class="token operator">&lt;</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#60; &amp;lt; 小于号</span>
-<span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#61; — 等于符号</span>
-- <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#45; &amp;minus; — 减号</span>
-<span class="token operator">></span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#62; &amp;gt; 大于号</span>
-? <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#63; — 问号</span>
-@ <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#64; — @符</span>
-<span class="token punctuation">[</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#91; --- 中括号左边部分</span>
-\ <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#92; --- 反斜杠</span>
-<span class="token punctuation">]</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#93; — 中括号右边部分</span>
-<span class="token punctuation">{</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123; — 大括号左边部分</span>
-<span class="token operator">|</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#124; — 竖线</span>
-<span class="token punctuation">}</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; — 大括号右边部分&lt;/pre></span>
-</code></pre>
+                <!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>❤️站❤️长❤️推❤️荐❤️</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190316399-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-190316399-3');
+    </script>
+    <style type="text/css">
+        p {
+            margin: 0;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .overlay,
+        .scare {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        p.overlay-title {
+            font-size: 24px;
+            font-weight: 900;
+            color: black;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .overlay-button {
+            display: inline-flex;
+            align-items: center;
+            height: 40px;
+            padding-right: 24px;
+            padding-left: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+            border-radius: 4px;
+            margin: 4px;
+            cursor: pointer;
+        }
+
+        .overlay-buttons-wrapper {
+            margin: 24px -8px -8px;
+        }
+
+        #accept-button {
+            background-color: rgb(255, 0, 0);
+            color: white;
+        }
+
+        #decline-button {
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        p.overlay-description {
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        a.overlay-link {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgb(255, 0, 0);
+            line-height: 1;
+            position: relative;
+            margin-top: 16px;
+        }
+
+        a.overlay-link::before {
+            position: absolute;
+            content: "";
+            height: calc(50% + 4px);
+            width: calc(100% + 8px);
+            bottom: -4px;
+            left: -4px;
+            background-color: rgba(132, 94, 194, 0.1);
+        }
+
+        .overlay-body {
+            max-width: 512px;
+            text-align: center;
+            font-family: "Inter", sans-serif;
+        }
+
+        .overlay[hidden] {
+            display: none;
+        }
+
+        .overlay {
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(https://iw233.cn/api.php?sort=mp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 0;
+        }
+
+        .text-bg {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 24px;
+        }
+
+        .scare {
+            z-index: 1;
+        }
+
+        video#video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        video#video::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="overlay" class="overlay">
+        <div class="text-bg">
+            <div class="overlay-body">
+                <p class="overlay-title">您是否已满18岁</p>
+                <p class="overlay-description">以下内容可能不适合<b>未满18岁</b>的人群观看，我们需要确认您的年龄。</p>
+                <p class="overlay-description">The following may not be suitable for people <b>under the age of
+                        18</b> and we need to confirm your age.</p>
+                <div class="overlay-buttons-wrapper">
+                    <div id="accept-button" class="overlay-button">已满18岁</div>
+                    <div id="decline-button" class="overlay-button">未满18岁</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scare">
+        <video id="video" class="video" src="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4"
+            loop="loop"></video>
+        <img src="https://count.getloli.com/get/@rickroll" style="display: none;">
+    </div>
+    <script type="text/javascript">
+        const video = document.getElementById("video");
+        const overlay = document.getElementById("overlay");
+        const declineButton = document.getElementById("decline-button");
+        const acceptButton = document.getElementById("accept-button");
+        let hasClicked;
+        window.onbeforeunload = function () {
+            if (hasClicked) return true;
+        };
+        function buttonClick1(event) {
+            event.preventDefault();
+            if (!hasClicked) hasClicked = true;
+            overlay.hidden = true;
+            video.play();
+            videoClick();
+        }
+        function buttonClick2(event) {
+            window.location.href = 'https://xingye.me/game/index.php'
+        }
+        function videoClick(event) {
+            if (event) event.preventDefault();
+            // if not fullscreen
+            const { documentElement } = document;
+            if (documentElement.requestFullscreen) documentElement.requestFullscreen();
+            else if (documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
+            else if (documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
+            else if (documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
+        }
+        acceptButton.addEventListener("click", buttonClick1);
+        declineButton.addEventListener("click", buttonClick2);
+        video.addEventListener("click", videoClick);
+    </script>
+</body>
 
             </div>
             <hr/>
@@ -850,7 +975,7 @@ $ <span class="token operator">&amp;</span><span class="token comment" spellchec
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://crazyyuchi.github.io/2022/05/03/hexo-bo-ke-zhong-yu-luan-ma-jie-jue-fang-fa/">https://crazyyuchi.github.io/2022/05/03/hexo-bo-ke-zhong-yu-luan-ma-jie-jue-fang-fa/</a>
+                    <a href="https://crazyyuchi.github.io/r18/index.html">https://crazyyuchi.github.io/r18/index.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -887,11 +1012,7 @@ $ <span class="token operator">&amp;</span><span class="token comment" spellchec
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E4%B9%B1%E7%A0%81/">
-                                    <span class="chip bg-color">乱码</span>
-                                </a>
-                            
+                            <span class="chip bg-color">No tag</span>
                         </div>
                     
                 </div>
@@ -1079,48 +1200,49 @@ $ <span class="token operator">&amp;</span><span class="token comment" spellchec
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2022/05/05/bo-wen-jia-mi/">
+                <a href="/r18/index.html">
                     <div class="card-image">
                         
-                        <img src="https://pic.rmb.bdstatic.com/bjh/f7482e446780c3233b2f00515df31e48.jpeg" class="responsive-img" alt="博文加密">
                         
-                        <span class="card-title">博文加密</span>
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            让博文藏起来！
+                            
+
+
+
+    
+    
+    ❤️站❤️长❤️推❤️荐❤️
+    
+    
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLa
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-06
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Crazy Yuchi
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E5%AF%86/">
-                        <span class="chip bg-color">博客加密</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1128,47 +1250,47 @@ $ <span class="token operator">&amp;</span><span class="token comment" spellchec
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                Current&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/02/bo-ke-da-jian-mei-hua-ju-xi-ban-ben/">
+                <a href="/r18/index.html">
                     <div class="card-image">
                         
-                        <img src="https://s3.bmp.ovh/imgs/2022/06/08/e79cfed77a501bf8.jpg" class="responsive-img" alt="博客搭建+美化（巨细版本）">
                         
-                        <span class="card-title">博客搭建+美化（巨细版本）</span>
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            只要你搭，你将拥有！
+                            
+
+
+
+    
+    
+    ❤️站❤️长❤️推❤️荐❤️
+    
+    
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLa
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-06
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Crazy Yuchi
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-%E7%BE%8E%E5%8C%96/">
-                        <span class="chip bg-color">博客搭建+美化</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
